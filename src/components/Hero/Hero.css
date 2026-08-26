@@ -1,0 +1,1039 @@
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 780px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  padding: 100px 8%;
+  box-sizing: border-box;
+
+  background: #082c1a;
+}
+
+
+/* =====================================================
+   BACKGROUND VIDEO
+===================================================== */
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+}
+
+
+/* =====================================================
+   PREMIUM OVERLAY
+===================================================== */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 35, 20, 0.98) 0%,
+      rgba(5, 55, 30, 0.90) 40%,
+      rgba(7, 65, 36, 0.58) 70%,
+      rgba(7, 65, 36, 0.25) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   GOLD GLOW
+===================================================== */
+
+.hero-glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: 5%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  background: rgba(212, 175, 55, 0.13);
+
+  filter: blur(90px);
+
+  border-radius: 50%;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: 55%;
+  max-width: 680px;
+
+  animation: heroContentReveal 0.9s ease both;
+}
+
+
+@keyframes heroContentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =====================================================
+   PREMIUM BADGE
+===================================================== */
+
+.hero-badge {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  padding: 9px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(12px);
+
+  color: #f4e7b0;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+.hero-badge span {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #d4af37;
+
+  box-shadow:
+    0 0 12px rgba(212, 175, 55, 0.8);
+}
+
+
+/* =====================================================
+   TAGLINE
+===================================================== */
+
+.hero-tagline {
+  margin: 0 0 14px;
+
+  color: #d4af37;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.hero-content h1 {
+  margin: 0 0 25px;
+
+  color: #ffffff;
+
+  font-size: clamp(48px, 6vw, 78px);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+}
+
+
+.hero-content h1 span {
+  color: #f1df9a;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.hero-description {
+  max-width: 570px;
+
+  margin: 0 0 32px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 45px;
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
+
+.hero-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  padding: 15px 24px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e6c85c,
+      #d4af37
+    );
+
+  color: #102b1c;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 25px rgba(212, 175, 55, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.hero-btn span {
+  font-size: 22px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 35px rgba(212, 175, 55, 0.35);
+}
+
+
+.hero-btn:hover span {
+  transform: translateX(5px);
+}
+
+
+.hero-btn:active {
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   SECONDARY BUTTON
+===================================================== */
+
+.hero-secondary-btn {
+  padding: 14px 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(10px);
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.hero-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+
+  border-color: #d4af37;
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.hero-features {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+}
+
+
+.hero-feature {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.hero-feature strong {
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+
+.hero-feature span {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+.feature-line {
+  width: 1px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
+.hero-image {
+  position: absolute;
+
+  z-index: 3;
+
+  right: 6%;
+  bottom: 12%;
+
+  width: 440px;
+  height: 440px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation:
+    heroImageReveal 1s ease 0.2s both;
+}
+
+
+@keyframes heroImageReveal {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+
+/* =====================================================
+   GOLD RING
+===================================================== */
+
+.image-ring {
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(212, 175, 55, 0.55);
+
+  box-shadow:
+    0 0 60px rgba(212, 175, 55, 0.12);
+
+  animation:
+    ringRotate 18s linear infinite;
+
+  pointer-events: none;
+}
+
+
+.image-ring::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 12px;
+
+  border-radius: 50%;
+
+  border: 1px dashed rgba(212, 175, 55, 0.28);
+}
+
+
+@keyframes ringRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =====================================================
+   COCONUT IMAGE
+===================================================== */
+
+.hero-image img {
+  position: relative;
+
+  z-index: 2;
+
+  width: 350px;
+  height: 350px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 6px solid rgba(255, 255, 255, 0.92);
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.40);
+
+  animation:
+    premiumFloat 5s ease-in-out infinite;
+}
+
+
+@keyframes premiumFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* =====================================================
+   IMAGE LABEL
+===================================================== */
+
+.image-label {
+  position: absolute;
+
+  z-index: 4;
+
+  right: -10px;
+  bottom: 25px;
+
+  width: 95px;
+  height: 95px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 3px solid #d4af37;
+
+  color: #14532d;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.22);
+}
+
+
+.image-label span {
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+
+.image-label strong {
+  font-size: 13px;
+
+  letter-spacing: 1px;
+}
+
+
+.image-label small {
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   SCROLL INDICATOR
+===================================================== */
+
+.hero-scroll {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 8%;
+  bottom: 25px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.hero-scroll span {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+
+.hero-scroll div {
+  width: 45px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  animation:
+    scrollLine 1.8s ease-in-out infinite;
+}
+
+
+@keyframes scrollLine {
+  0%,
+  100% {
+    width: 25px;
+    opacity: 0.4;
+  }
+
+  50% {
+    width: 55px;
+    opacity: 1;
+  }
+}
+
+
+/* =====================================================
+   LARGE LAPTOP
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .hero {
+    padding: 90px 6%;
+  }
+
+  .hero-content {
+    width: 58%;
+  }
+
+  .hero-image {
+    right: 3%;
+
+    width: 380px;
+    height: 380px;
+  }
+
+  .image-ring {
+    width: 350px;
+    height: 350px;
+  }
+
+  .hero-image img {
+    width: 310px;
+    height: 310px;
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  .hero {
+    min-height: 700px;
+
+    padding: 80px 6%;
+  }
+
+  .hero-content {
+    width: 60%;
+  }
+
+  .hero-content h1 {
+    font-size: 50px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    right: 2%;
+    bottom: 12%;
+
+    width: 300px;
+    height: 300px;
+  }
+
+  .image-ring {
+    width: 285px;
+    height: 285px;
+  }
+
+  .hero-image img {
+    width: 245px;
+    height: 245px;
+
+    border-width: 5px;
+  }
+
+  .image-label {
+    width: 72px;
+    height: 72px;
+
+    right: -3px;
+    bottom: 5px;
+  }
+
+  .image-label span {
+    font-size: 7px;
+  }
+
+  .image-label strong {
+    font-size: 9px;
+  }
+
+  .image-label small {
+    font-size: 6px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 820px;
+
+    padding: 65px 6%;
+
+    align-items: flex-start;
+
+    text-align: center;
+  }
+
+
+  /* Overlay */
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(4, 35, 20, 0.96),
+        rgba(5, 55, 30, 0.82)
+      );
+  }
+
+
+  /* Glow */
+
+  .hero-glow {
+    width: 300px;
+    height: 300px;
+
+    right: 50%;
+    top: 70%;
+
+    transform: translate(50%, -50%);
+  }
+
+
+  /* Content */
+
+  .hero-content {
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+  }
+
+
+  /* Badge */
+
+  .hero-badge {
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 11px;
+  }
+
+
+  /* Tagline */
+
+  .hero-tagline {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+  }
+
+
+  /* Heading */
+
+  .hero-content h1 {
+    font-size: clamp(38px, 10vw, 52px);
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+  }
+
+
+  /* Description */
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  /* Buttons */
+
+  .hero-actions {
+    justify-content: center;
+
+    margin-bottom: 30px;
+  }
+
+
+  /* Features */
+
+  .hero-features {
+    justify-content: center;
+  }
+
+
+  /* Image */
+
+  .hero-image {
+    width: 250px;
+    height: 250px;
+
+    right: 50%;
+    bottom: 30px;
+
+    transform: translateX(50%);
+  }
+
+  .image-ring {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero-image img {
+    width: 205px;
+    height: 205px;
+
+    border-width: 4px;
+
+    animation: none;
+  }
+
+
+  /* Label */
+
+  .image-label {
+    width: 65px;
+    height: 65px;
+
+    right: -2px;
+    bottom: 5px;
+
+    border-width: 2px;
+  }
+
+  .image-label span {
+    font-size: 6px;
+  }
+
+  .image-label strong {
+    font-size: 8px;
+  }
+
+  .image-label small {
+    font-size: 5px;
+  }
+
+
+  /* Hide scroll */
+
+  .hero-scroll {
+    display: none;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .hero {
+    min-height: 760px;
+
+    padding: 50px 20px;
+  }
+
+  .hero-badge {
+    padding: 8px 13px;
+
+    font-size: 10px;
+  }
+
+  .hero-tagline {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  /* Buttons */
+
+  .hero-actions {
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 10px;
+  }
+
+  .hero-btn,
+  .hero-secondary-btn {
+    width: 100%;
+  }
+
+  .hero-btn {
+    justify-content: center;
+  }
+
+
+  /* Features */
+
+  .hero-features {
+    gap: 14px;
+  }
+
+  .hero-feature strong {
+    font-size: 14px;
+  }
+
+  .hero-feature span {
+    font-size: 9px;
+  }
+
+  .feature-line {
+    height: 25px;
+  }
+
+
+  /* Image */
+
+  .hero-image {
+    width: 205px;
+    height: 205px;
+
+    bottom: 20px;
+  }
+
+  .image-ring {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-image img {
+    width: 165px;
+    height: 165px;
+
+    border-width: 4px;
+  }
+
+
+  /* Label */
+
+  .image-label {
+    width: 55px;
+    height: 55px;
+
+    right: -2px;
+    bottom: 2px;
+  }
+
+  .image-label span {
+    font-size: 5px;
+  }
+
+  .image-label strong {
+    font-size: 7px;
+  }
+
+  .image-label small {
+    font-size: 5px;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-content,
+  .hero-image,
+  .hero-image img,
+  .image-ring,
+  .hero-scroll div {
+    animation: none;
+  }
+
+  .hero-btn,
+  .hero-secondary-btn,
+  .hero-btn span {
+    transition: none;
+  }
+}

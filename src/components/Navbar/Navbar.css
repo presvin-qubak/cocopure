@@ -1,0 +1,604 @@
+/* =====================================================
+   PREMIUM COCOPURE NAVBAR
+===================================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  background:
+    linear-gradient(
+      110deg,
+      #0b3d22 0%,
+      #14532d 48%,
+      #166534 78%,
+      #8f7620 100%
+    );
+
+  border-bottom: 1px solid rgba(212, 175, 55, 0.75);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.16);
+
+  z-index: 1000;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* =====================================================
+   NAV CONTAINER
+===================================================== */
+
+.nav-container {
+  width: 90%;
+  max-width: 1250px;
+  min-height: 78px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   LOGO ICON
+===================================================== */
+
+.logo-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #ffffff,
+      #f8f5e9
+    );
+
+  border: 2px solid #d4af37;
+
+  font-size: 22px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.18),
+    0 0 0 4px rgba(212, 175, 55, 0.08);
+}
+
+
+/* =====================================================
+   LOGO TEXT
+===================================================== */
+
+.logo-text {
+  color: #ffffff;
+
+  font-size: 26px;
+  font-weight: 800;
+
+  letter-spacing: -0.7px;
+}
+
+.logo-text span {
+  color: #d4af37;
+}
+
+
+/* =====================================================
+   DESKTOP NAVIGATION
+===================================================== */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+}
+
+
+/* =====================================================
+   NAV LINKS
+===================================================== */
+
+.nav-links a {
+  position: relative;
+
+  padding: 11px 16px;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+
+  border-radius: 10px;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.nav-links a:hover {
+  color: #14532d;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e8cf6a,
+      #d4af37
+    );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   ACTIVE NAVLINK
+===================================================== */
+
+.nav-links a.active {
+  color: #14532d;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e8cf6a,
+      #d4af37
+    );
+
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   BENEFITS LINK
+   Normal Link - never receives .active
+===================================================== */
+
+.nav-links .benefits-link {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+
+/* =====================================================
+   GOLD UNDERLINE
+===================================================== */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 4px;
+
+  width: 0;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 24px;
+}
+
+
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
+
+.menu-btn {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 8px;
+
+  border: 1px solid #d4af37;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7f3e5
+    );
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.menu-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================================
+   HAMBURGER LINES
+===================================================== */
+
+.menu-btn span {
+  display: block;
+
+  width: 23px;
+  height: 2px;
+
+  margin: 5px auto;
+
+  background: #14532d;
+
+  border-radius: 5px;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* =====================================================
+   ANIMATED HAMBURGER
+===================================================== */
+
+.menu-btn.active span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+
+/* =====================================================
+   FOCUS
+===================================================== */
+
+.logo:focus-visible,
+.nav-links a:focus-visible,
+.mobile-nav a:focus-visible,
+.menu-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+
+/* =====================================================
+   MOBILE NAV
+===================================================== */
+
+.mobile-nav {
+  display: none;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .nav-container {
+    width: 92%;
+  }
+
+  .nav-links {
+    gap: 2px;
+  }
+
+  .nav-links a {
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .nav-container {
+    width: 90%;
+    min-height: 70px;
+  }
+
+
+  /* Hide desktop navigation */
+
+  .nav-links {
+    display: none;
+  }
+
+
+  /* Show hamburger */
+
+  .menu-btn {
+    display: block;
+  }
+
+
+  /* ===================================================
+     MOBILE DROPDOWN
+  =================================================== */
+
+  .mobile-nav {
+    position: absolute;
+
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+
+    background:
+      linear-gradient(
+        145deg,
+        #ffffff,
+        #f8f8f3
+      );
+
+    border: 1px solid rgba(212, 175, 55, 0.75);
+
+    border-radius: 18px;
+
+    box-shadow:
+      0 20px 45px rgba(0, 0, 0, 0.20);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform:
+      translateY(-12px)
+      scale(0.98);
+
+    transform-origin: top center;
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+
+  /* ===================================================
+     OPEN MOBILE MENU
+  =================================================== */
+
+  .mobile-nav-open {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+
+  /* ===================================================
+     MOBILE LINKS
+  =================================================== */
+
+  .mobile-nav a {
+    position: relative;
+
+    display: block;
+
+    padding: 14px 16px;
+
+    color: #14532d;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    border-radius: 11px;
+
+    transition:
+      color 0.25s ease,
+      background 0.25s ease,
+      transform 0.25s ease;
+  }
+
+
+  /* ===================================================
+     MOBILE HOVER
+  =================================================== */
+
+  .mobile-nav a:hover {
+    color: #14532d;
+
+    background:
+      linear-gradient(
+        135deg,
+        #f2df8a,
+        #d4af37
+      );
+
+    transform: translateX(3px);
+  }
+
+
+  /* ===================================================
+     ACTIVE MOBILE NAVLINK
+  =================================================== */
+
+  .mobile-nav a.active {
+    color: #14532d;
+
+    background:
+      linear-gradient(
+        135deg,
+        #f2df8a,
+        #d4af37
+      );
+  }
+
+
+  /* ===================================================
+     BENEFITS
+     Normal Link - no active background
+  =================================================== */
+
+  .mobile-nav .benefits-link {
+    color: #14532d;
+
+    background: transparent;
+  }
+
+
+  .mobile-nav .benefits-link:hover {
+    color: #14532d;
+
+    background:
+      linear-gradient(
+        135deg,
+        #f2df8a,
+        #d4af37
+      );
+
+    transform: translateX(3px);
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .nav-container {
+    width: 90%;
+    min-height: 66px;
+  }
+
+
+  .logo {
+    gap: 8px;
+  }
+
+
+  .logo-icon {
+    width: 38px;
+    height: 38px;
+
+    font-size: 19px;
+  }
+
+
+  .logo-text {
+    font-size: 22px;
+  }
+
+
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .mobile-nav {
+    top: calc(100% + 8px);
+  }
+
+
+  .mobile-nav a {
+    padding: 13px 14px;
+    font-size: 14px;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .navbar *,
+  .navbar *::after {
+    transition: none !important;
+  }
+}
