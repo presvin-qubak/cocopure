@@ -19,16 +19,20 @@ function App() {
       <Navbar />
 
       <Routes>
+        {/* Home */}
         <Route path="/" element={<Home />} />
+
+        {/* Pages */}
         <Route path="/about" element={<About />} />
         <Route path="/benefits" element={<Benefits />} />
         <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
-        <Route
-  path="/view-products/:id"
-  element={<ViewProducts />}
-/>
 
+        {/* Product Details */}
+        <Route
+          path="/view-products/:id"
+          element={<ViewProducts />}
+        />
       </Routes>
 
       <Footer />
